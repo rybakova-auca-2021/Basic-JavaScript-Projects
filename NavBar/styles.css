@@ -1,0 +1,124 @@
+:root {
+    --main: #fbfbf7;
+    --background-color: #FFE4A7;
+    --pink: #FF90BB;
+    --dark-pink: #FF2171;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+}
+
+body {
+    background-color: var(--main);
+}
+
+.logo {
+    color: var(--dark-pink);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: var(--background-color);
+}
+
+header .header-left {
+    display: flex;
+    align-items: center;
+}
+
+header .header-left nav {
+    margin-left: 50px;
+}
+
+header .header-left nav ul {
+    display: flex;
+}
+
+header .navbar {
+    padding: 10rem;
+}
+
+header .navbar a {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: var(--dark-pink);
+}
+
+header .navbar a:hover {
+    color: rgb(0, 0, 0);
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+header .header-right .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+header .header-right .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: var(--dark-pink);
+}
+
+header .social-links {
+    display: flex;
+    align-items: center;
+}
+
+header .social-links a {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    color: var(--dark-pink);
+}
+
+header .social-links a:hover {
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+        font-size: 1.5rem;
+        display: flex;
+    }
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: center;
+        z-index: -1;
+    }
+    header .header-left nav.active {
+        top: 70px;
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
