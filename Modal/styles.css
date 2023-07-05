@@ -1,0 +1,117 @@
+:root {
+    --main: #e9a7b9;
+    --background-color: #fff0ce;
+    --pink: #FF90BB;
+    --dark-pink: #FF2171;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.logo {
+    color: var(--dark-pink);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header {
+    min-height: 100vh;
+    background: url("./photo.webp") center/cover no-repeat;
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    background: rgb(255, 216, 216);
+    padding: 3rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 50vw;
+    max-width: 620px;
+  }
+
+  .container h1{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .open-btn {
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    border-color: white;
+    width: 130px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .open-btn:hover {
+    background-color: transparent;
+    color: black;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 203, 203, 0.5);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    z-index: -10;
+  }
+
+  .open-modal {
+    visibility: visible;
+    z-index: 10;
+  }
+
+  .modal {
+    background: white;
+    border-radius: 0.5rem;
+    width: 90vw;
+    height: 30vh;
+    max-width: 620px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: absolute;
+  }
+
+  .modal h3 {
+    font-size: 3rem;
+  }
+
+  .close-btn {
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border-color: white;
+    width: 130px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background-color: transparent;
+    color: black;
+  }
+
+
+@media only screen and (max-width: 1000px) {
+    
+}
